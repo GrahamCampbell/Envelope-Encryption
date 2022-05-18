@@ -1,5 +1,5 @@
 {
-    "name": "graham-campbell/envelop-encryption",
+    "name": "graham-campbell/envelope-encryption",
     "description": "Provides symmetric envelope encryption using AWS KMS.",
     "keywords": ["encryption", "encryption", "AWS", "KMS", "symmetric", "Graham Campbell", "GrahamCampbell"],
     "license": "MIT",

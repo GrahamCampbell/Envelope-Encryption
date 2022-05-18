@@ -18,7 +18,7 @@ This version requires [PHP](https://www.php.net/) 8.1.
 To get the latest version, simply require the project using [Composer](https://getcomposer.org):
 
 ```bash
-$ composer require "graham-campbell/envelope-encryption:^1.0" --dev
+$ composer require "graham-campbell/envelope-encryption:^1.0"
 ```
 
 
