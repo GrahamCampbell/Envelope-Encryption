@@ -1,0 +1,39 @@
+{
+    "name": "graham-campbell/envelop-encryption",
+    "description": "Provides symmetric envelope encryption using AWS KMS.",
+    "keywords": ["encryption", "encryption", "AWS", "KMS", "symmetric", "Graham Campbell", "GrahamCampbell"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Graham Campbell",
+            "email": "hello@gjcampbell.co.uk",
+            "homepage": "https://github.com/GrahamCampbell"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "ext-sodium": "*",
+        "async-aws/kms": "^0.1",
+        "paragonie/halite": "^5.0",
+        "paragonie/hidden-string": "^2.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.5",
+        "phpunit/phpunit": "^9.5.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "GrahamCampbell\\EnvelopeEncryption\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GrahamCampbell\\Tests\\EnvelopeEncryption\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
