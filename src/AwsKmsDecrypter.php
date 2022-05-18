@@ -17,13 +17,13 @@ use AsyncAws\Kms\Enum\EncryptionAlgorithmSpec;
 use AsyncAws\Kms\Input\DecryptRequest;
 use AsyncAws\Kms\KmsClient;
 use Exception;
+use GrahamCampbell\EnvelopeEncryption\Contracts\DecrypterInterface;
+use GrahamCampbell\EnvelopeEncryption\Entities\Envelope;
+use GrahamCampbell\EnvelopeEncryption\Exceptions\DecryptionFailedException;
 use LogicException;
 use ParagonIE\Halite\Symmetric\Crypto;
 use ParagonIE\Halite\Symmetric\EncryptionKey;
 use ParagonIE\HiddenString\HiddenString;
-use GrahamCampbell\EnvelopeEncryption\Contracts\DecrypterInterface;
-use GrahamCampbell\EnvelopeEncryption\Entities\Envelope;
-use GrahamCampbell\EnvelopeEncryption\Exceptions\DecryptionFailedException;
 
 final class AwsKmsDecrypter implements DecrypterInterface
 {
@@ -40,9 +40,9 @@ final class AwsKmsDecrypter implements DecrypterInterface
         try {
             $dataKey = $this->client->decrypt(
                 new DecryptRequest([
-                    'CiphertextBlob' => $envelope->getKeyCiphertext(),
+                    'CiphertextBlob'      => $envelope->getKeyCiphertext(),
                     'EncryptionAlgorithm' => EncryptionAlgorithmSpec::SYMMETRIC_DEFAULT,
-                    'KeyId' => $envelope->getKeyId(),
+                    'KeyId'               => $envelope->getKeyId(),
                 ]),
             );
 

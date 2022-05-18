@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace GrahamCampbell\Tests\EnvelopEncryption\Entities;
 
+use GrahamCampbell\EnvelopeEncryption\Entities\Input;
 use ParagonIE\HiddenString\HiddenString;
 use PHPUnit\Framework\TestCase;
 use ValueError;
-use GrahamCampbell\EnvelopeEncryption\Entities\Input;
 
 class InputTest extends TestCase
 {

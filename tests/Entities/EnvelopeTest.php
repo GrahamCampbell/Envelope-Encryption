@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace GrahamCampbell\Tests\EnvelopEncryption\Entities;
 
+use GrahamCampbell\EnvelopeEncryption\Entities\Envelope;
 use PHPUnit\Framework\TestCase;
 use ValueError;
-use GrahamCampbell\EnvelopeEncryption\Entities\Envelope;
 
 class EnvelopeTest extends TestCase
 {

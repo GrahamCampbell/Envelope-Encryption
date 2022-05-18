@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace GrahamCampbell\Tests\EnvelopEncryption;
 
-use PHPUnit\Framework\TestCase;
 use GrahamCampbell\EnvelopeEncryption\Contracts\SerializerInterface;
 use GrahamCampbell\EnvelopeEncryption\Entities\Envelope;
 use GrahamCampbell\EnvelopeEncryption\JsonSerializer;
+use PHPUnit\Framework\TestCase;
 
 class JsonSerializerTest extends TestCase
 {

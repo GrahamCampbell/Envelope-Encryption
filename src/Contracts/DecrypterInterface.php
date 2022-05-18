@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace GrahamCampbell\EnvelopeEncryption\Contracts;
 
-use ParagonIE\HiddenString\HiddenString;
 use GrahamCampbell\EnvelopeEncryption\Entities\Envelope;
 use GrahamCampbell\EnvelopeEncryption\Exceptions\DecryptionFailedException;
+use ParagonIE\HiddenString\HiddenString;
 
 interface DecrypterInterface
 {

@@ -15,15 +15,15 @@ namespace GrahamCampbell\Tests\EnvelopEncryption;
 
 use AsyncAws\Kms\KmsClient;
 use AsyncAws\Kms\Result\GenerateDataKeyResponse;
-use LogicException;
-use Mockery;
-use ParagonIE\HiddenString\HiddenString;
-use PHPUnit\Framework\TestCase;
 use GrahamCampbell\EnvelopeEncryption\AwsKmsEncrypter;
 use GrahamCampbell\EnvelopeEncryption\Contracts\EncrypterInterface;
 use GrahamCampbell\EnvelopeEncryption\Entities\Envelope;
 use GrahamCampbell\EnvelopeEncryption\Entities\Input;
 use GrahamCampbell\EnvelopeEncryption\Exceptions\EncryptionFailedException;
+use LogicException;
+use Mockery;
+use ParagonIE\HiddenString\HiddenString;
+use PHPUnit\Framework\TestCase;
 
 class AwsEncrypterTest extends TestCase
 {

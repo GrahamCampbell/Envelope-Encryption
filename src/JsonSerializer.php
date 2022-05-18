@@ -22,8 +22,8 @@ final class JsonSerializer implements SerializerInterface
     {
         return json_encode([
             'data_ciphertext' => base64_encode($envelope->getDataCiphertext()),
-            'key_ciphertext' => base64_encode($envelope->getKeyCiphertext()),
-            'key_id' => $envelope->getKeyId(),
+            'key_ciphertext'  => base64_encode($envelope->getKeyCiphertext()),
+            'key_id'          => $envelope->getKeyId(),
         ]);
     }
 }

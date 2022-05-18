@@ -14,8 +14,8 @@ declare(strict_types=1);
 namespace GrahamCampbell\Tests\EnvelopEncryption\Exceptions;
 
 use Exception;
-use PHPUnit\Framework\TestCase;
 use GrahamCampbell\EnvelopeEncryption\Exceptions\EncryptionFailedException;
+use PHPUnit\Framework\TestCase;
 
 class EncryptionFailedExceptionTest extends TestCase
 {

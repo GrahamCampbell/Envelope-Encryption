@@ -17,14 +17,14 @@ use AsyncAws\Kms\Enum\DataKeySpec;
 use AsyncAws\Kms\Input\GenerateDataKeyRequest;
 use AsyncAws\Kms\KmsClient;
 use Exception;
-use LogicException;
-use ParagonIE\Halite\Symmetric\Crypto;
-use ParagonIE\Halite\Symmetric\EncryptionKey;
-use ParagonIE\HiddenString\HiddenString;
 use GrahamCampbell\EnvelopeEncryption\Contracts\EncrypterInterface;
 use GrahamCampbell\EnvelopeEncryption\Entities\Envelope;
 use GrahamCampbell\EnvelopeEncryption\Entities\Input;
 use GrahamCampbell\EnvelopeEncryption\Exceptions\EncryptionFailedException;
+use LogicException;
+use ParagonIE\Halite\Symmetric\Crypto;
+use ParagonIE\Halite\Symmetric\EncryptionKey;
+use ParagonIE\HiddenString\HiddenString;
 
 final class AwsKmsEncrypter implements EncrypterInterface
 {
@@ -41,7 +41,7 @@ final class AwsKmsEncrypter implements EncrypterInterface
         try {
             $dataKey = $this->client->generateDataKey(
                 new GenerateDataKeyRequest([
-                    'KeyId' => $input->getKeyId(),
+                    'KeyId'   => $input->getKeyId(),
                     'KeySpec' => DataKeySpec::AES_256,
                 ]),
             );
