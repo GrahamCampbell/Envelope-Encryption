@@ -15,7 +15,7 @@ This package was created by, and is maintained by [Graham Campbell](https://gith
 
 This version requires [PHP](https://www.php.net/) 8.1.
 
-To get the latest version, simply require the project using [Composer](https://getcomposer.org):
+To get the latest version, simply require the project using [Composer](https://getcomposer.org/):
 
 ```bash
 $ composer require "graham-campbell/envelope-encryption:^1.0"
