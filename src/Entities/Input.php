@@ -22,8 +22,8 @@ final class Input
      * @param non-empty-string $keyId
      */
     public function __construct(
-        private HiddenString $dataPlaintext,
-        private string $keyId,
+        private readonly HiddenString $dataPlaintext,
+        private readonly string $keyId,
     ) {
         if ('' === $keyId) {
             throw new ValueError(sprintf('%s(): Argument #2 ($keyId) must be non-empty', __METHOD__));

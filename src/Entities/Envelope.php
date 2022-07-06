@@ -21,9 +21,9 @@ final class Envelope
      * @param non-empty-string $keyId
      */
     public function __construct(
-        private string $dataCiphertext,
-        private string $keyCiphertext,
-        private string $keyId,
+        private readonly string $dataCiphertext,
+        private readonly string $keyCiphertext,
+        private readonly string $keyId,
     ) {
         if ('' === $keyId) {
             throw new ValueError(sprintf('%s(): Argument #3 ($keyId) must be non-empty', __METHOD__));

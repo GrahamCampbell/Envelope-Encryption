@@ -29,7 +29,7 @@ use ParagonIE\HiddenString\HiddenString;
 final class AwsKmsEncrypter implements EncrypterInterface
 {
     public function __construct(
-        private KmsClient $client
+        private readonly KmsClient $client
     ) {
     }
 
