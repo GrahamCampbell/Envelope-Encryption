@@ -16,6 +16,7 @@ namespace GrahamCampbell\EnvelopeEncryption;
 use GrahamCampbell\EnvelopeEncryption\Contracts\DeserializerInterface;
 use GrahamCampbell\EnvelopeEncryption\Entities\Envelope;
 use GrahamCampbell\EnvelopeEncryption\Exceptions\InvalidPayloadException;
+use GrahamCampbell\EnvelopeEncryption\Utilities\Base64;
 
 final class JsonDeserializer implements DeserializerInterface
 {
@@ -49,8 +50,8 @@ final class JsonDeserializer implements DeserializerInterface
         }
 
         return new Envelope(
-            base64_decode($dataCiphertext),
-            base64_decode($keyCiphertext),
+            Base64::decode($dataCiphertext),
+            Base64::decode($keyCiphertext),
             $keyId,
         );
     }

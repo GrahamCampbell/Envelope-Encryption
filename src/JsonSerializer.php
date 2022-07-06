@@ -15,14 +15,15 @@ namespace GrahamCampbell\EnvelopeEncryption;
 
 use GrahamCampbell\EnvelopeEncryption\Contracts\SerializerInterface;
 use GrahamCampbell\EnvelopeEncryption\Entities\Envelope;
+use GrahamCampbell\EnvelopeEncryption\Utilities\Base64;
 
 final class JsonSerializer implements SerializerInterface
 {
     public function serialize(Envelope $envelope): string
     {
         return json_encode([
-            'data_ciphertext' => base64_encode($envelope->getDataCiphertext()),
-            'key_ciphertext'  => base64_encode($envelope->getKeyCiphertext()),
+            'data_ciphertext' => Base64::encode($envelope->getDataCiphertext()),
+            'key_ciphertext'  => Base64::encode($envelope->getKeyCiphertext()),
             'key_id'          => $envelope->getKeyId(),
         ]);
     }
